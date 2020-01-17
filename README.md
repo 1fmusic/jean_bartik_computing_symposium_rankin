@@ -1,23 +1,28 @@
 # jean_bartik_computing_symposium_rankin
 Natural Language Processing workshop at the Jean Bartik Computing Symposium 2020. 
-# Ted Talk Recommender
+# Ted Talk Topic Modeling
 
 Order of the files: (keep reading for descriptions) 
 
-1. [ted_clean_explore.nb][1] 
-2. [topic_modeling_ted_1.nb][6] 
-3. [Recommender_ted.nb][3] 
+7. [environment.yml][3]
+1. [ted_clean_jbcs.ipynb][1] 
+2. [topic_modeling_ted_jbcs.nb][2] 
+8. [topic_modeling_tSNE_tutorial3.ipynb][9]
+3. [Recommender_ted.nb][6] 
 4. [ted_rec.html][4] 
 5. [ted_app.py][5] 
-6. [ted_talks_2_elastic_slides.ipynb][7]
-7. [tsne_environment.yml][8]
-8. [topic_modeling_tSNE_tutorial3.ipynb][9]
 
 
-[7]: https://github.com/1fmusic/tedTalkRecommender/blob/master/ted_talks_2_elastic_slides.ipynb
+[1]: https://github.com/1fmusic/jean_bartik_computing_symposium_rankin/blob/master/ted_clean_jbcs.ipynb
+[2]: https://github.com/1fmusic/jean_bartik_computing_symposium_rankin/blob/master/ted_modeling_ted_jbcs.ipynb
 
-[8]: https://github.com/1fmusic/tedTalkRecommender/blob/master/tsne_environment.yml
-[9]: https://github.com/1fmusic/tedTalkRecommender/blob/master/topic_modeling_tSNE_tutorial3.ipynb
+[3]: https://github.com/1fmusic/jean_bartik_computing_symposium_rankin/blob/master/environment.yml
+[9]: https://github.com/1fmusic/jean_bartik_computing_symposium_rankin/blob/master/topic_modeling_tSNE_tutorial3.ipynb
+[4]: https://github.com/1fmusic/tedTalkRecommender/blob/master/ted_rec.html
+[5]: https://github.com/1fmusic/tedTalkRecommender/blob/master/ted_app.py
+[6]: https://github.com/1fmusic/tedTalkRecommender/blob/master/Recommender_ted.nb
+
+
 
 
 This repo contains Ipython/Jupyter notebooks for basic exploration of transcripts of Ted Talks using Natural Language Processing (NLP), topic modeling, and a recommender that lets you enter key words from the title of a talk and finds 5 talks that are similar.
