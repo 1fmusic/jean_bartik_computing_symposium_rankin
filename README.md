@@ -4,17 +4,17 @@ Natural Language Processing workshop at the Jean Bartik Computing Symposium 2020
 
 Order of the files: (keep reading for descriptions) 
 
-7. [environment.yml][3]
-1. [ted_clean_jbcs.ipynb][1] 
-2. [topic_modeling_ted_jbcs.nb][2] 
-8. [topic_modeling_tSNE_tutorial3.ipynb][9]
-3. [Recommender_ted.nb][6] 
-4. [ted_rec.html][4] 
-5. [ted_app.py][5] 
+1. [environment.yml][3]
+2. [ted_clean_jbcs.ipynb][1] 
+3. [topic_modeling_ted_jbcs.nb][10] 
+4. [topic_modeling_tSNE_tutorial3.ipynb][9]
+5. [Recommender_ted.nb][6] 
+6. [ted_rec.html][4] 
+7. [ted_app.py][5] 
 
 
 [1]: https://github.com/1fmusic/jean_bartik_computing_symposium_rankin/blob/master/ted_clean_jbcs.ipynb
-[2]: https://github.com/1fmusic/jean_bartik_computing_symposium_rankin/blob/master/ted_modeling_ted_jbcs.ipynb
+[10]: https://github.com/1fmusic/jean_bartik_computing_symposium_rankin/blob/master/ted_modeling_ted_jbcs.ipynb
 
 [3]: https://github.com/1fmusic/jean_bartik_computing_symposium_rankin/blob/master/environment.yml
 [9]: https://github.com/1fmusic/jean_bartik_computing_symposium_rankin/blob/master/topic_modeling_tSNE_tutorial3.ipynb
@@ -25,18 +25,16 @@ Order of the files: (keep reading for descriptions)
 
 
 
-This repo contains Ipython/Jupyter notebooks for basic exploration of transcripts of Ted Talks using Natural Language Processing (NLP), topic modeling, and a recommender that lets you enter key words from the title of a talk and finds 5 talks that are similar.
+This repo contains Ipython/Jupyter notebooks for basic exploration of transcripts of Ted Talks using Natural Language Processing (NLP), topic modeling, and I also link to the code for a recommender that lets you enter key words from the title of a talk and finds 5 talks that are similar.
     The data consists of transcripts from Ted and TedX talks. Thanks to the lovely Rounak Banik and his web scraping I was able to dowload transcripts from 2467 Ted and TedX talks from 355 different Ted events. I downloaded this corpus from Kaggle, along with metadata about every talk. I encourage you to go to kaggle and download it so that he can get credit for his scraping rather than put it in this repo.
     https://www.kaggle.com/rounakbanik/ted-talks
     
 
 The initial cleaning and exploration are done in 
    
-[ted_clean_explore.nb][1] 
+[ted_clean_jbcs.ipynb][1] 
     
-[1]: https://github.com/1fmusic/tedTalkRecommender/blob/master/ted_clean_explore.ipynb/
-
-   Start by importing the csv files and looking at the raw data. Combine the metadata and transcripts and save as 'ted_all' (both datasets have a url column, so we merge on that one). Create a variable that holds only the transcripts called 'talks'. Below is a sample of the transcript from the most popular (highest views) Ted Talk. 'Do Schools Kill Creativity? by Sir Ken Robinson. 
+   Start by importing the csv files and looking at the raw data. Create a variable that holds only the transcripts called 'talks'. Below is a sample of the transcript from the most popular (highest views) Ted Talk. 'Do Schools Kill Creativity? by Sir Ken Robinson. 
 
     Good morning. How are you?(Laughter)It\\'s been great, hasn\\'t it? 
 
@@ -130,10 +128,8 @@ As you can see it no longer makes a ton of sense, but it will still be very info
 # Now we are ready for topic modeling!
 Open:
 
-[topic_modeling_ted_1.nb][6] 
+[topic_modeling_ted_jbcs.ipynb][10] 
     
-[6]: https://github.com/1fmusic/tedTalkRecommender/blob/master/topic_modeling_ted_1.ipynb
-
     
 First get the cleaned_talks from the previous step. Then import the models
 
@@ -177,45 +173,3 @@ Then we can use some visualization tools to 'see' what our clusters look like. T
 The best way to 'see' the clusters, is to do another dimensionality reduction and plot them in a new (3D) space. This is called tSNE (t-Distributed Stochastic Neighbor Embedding. When you view the tSNE ,it is important to remember that the distance between clusters isn't relevant, just the clumpiness of the clusters. For example, do the points that are red clump together or are they really spread out? If they are all spread out, then that topic is probably not very cohesive (the documents in there may not be very similar).  
     
 After the tSNE plot, you will find the functions to run the other models (NMF, Truncated SVD). 
-    
-
-# Recommender
-
-[Recommender_ted.nb][3] 
-    
-[3]: https://github.com/1fmusic/tedTalkRecommender/blob/master/Recommender_ted.ipynb
-    
-Load the entire data set, and all the results from the LDA model.
-The function will take in a talk (enter the ID number) and find the 10 closest talks using nearest neighbors.  
-    
-The distance, topic name, url, and ted's tags for the talk will print for the talk you enter and each recommendation. 
-
-# Flask App
-    
-There is an even better verion of the recommender in the form of a flask app. This app can also 'find' your talk even if you don't remember the title.
-
-[ted_rec.html][4] 
-    
-[4]: https://github.com/1fmusic/tedTalkRecommender/blob/master/ted_rec.html
-
-[ted_app.py][5] 
-    
-[5]: https://github.com/1fmusic/tedTalkRecommender/blob/master/ted_app.py
-
-    
-You enter the keywords, or words from the title. 
-Then, it returns your talk's title and url along with 5 similar ted talks (urls) that are similar to yours.  
-
-# Prep and push into an elasticsearch database
-
-I gave a talk at the Devfest DC 2019 where I discussed taking our ted talk data and model results and ingesting them into an elasticsearch index so that we can use Kibana to view our results and search the data. The last notebook is the code that prepares our dataframe for ingestion (some cleaning). I show several examples for various ways to get data of this type (one big dataframe) into elasticsearch since most tutorials focus on other types of streaming data. 
-
-[ted_talks_2_elastic_slides.ipynb][7]
-
-# t-SNE plotting with plotly
-
-This workbook is from a 'Cakes and Tensors' presentation at Booz Allen Hamilton. It focuses on t-SNE plotting using matplotlib and plotly, as well as saving the data to upload to plotly. There is also a yml file if you want to recreate my conda environment (the instructions for this are at the top of the notebook).  You can view this notebook with nbviewer at https://nbviewer.jupyter.org/github/1fmusic/tedTalkRecommender/blob/master/topic_modeling_tSNE_tutorial2.ipynb
-
-[topic_modeling_tSNE_tutorial3.ipynb][8]
-[tsne_environment.yml][9]
- 
