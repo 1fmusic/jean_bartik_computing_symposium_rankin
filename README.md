@@ -18,16 +18,16 @@ United States Naval Academy
         b)	If you don’t have a github account, download as zip:
 
 3.	Start Anaconda Prompt (miniconda3) 
-        On Windows: Search for ‘anaconda’ in the ‘Search Windows’ bar
+        On Windows: Search for ‘anaconda’ in the ‘Search Windows’ bar  
         On Mac/Linux: Open Terminal
         
 4.	Create an environment with .yml file
-        Navigate inside the repo folder
-        `$ conda env create -f environment.yml`
-        `$ conda activate jbcs2020`
-        `$ jupyter notebook`
-        A browser will open showing the directory tree. Click on the notebook you want to open. 
-        At end of session, `$ conda deactivate`
+        Navigate inside the repo folder  
+        `$ conda env create -f environment.yml`  
+        `$ conda activate jbcs2020`  
+        `$ jupyter notebook`  
+        A browser will open showing the directory tree. Click on the notebook you want to open.  
+        At end of session, `$ conda deactivate`  
 
 # Order of the files: (keep reading for descriptions) 
 
