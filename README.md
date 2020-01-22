@@ -56,9 +56,10 @@ United States Naval Academy
 
 
 
-This repo contains Ipython/Jupyter notebooks for basic exploration of transcripts of Ted Talks using Natural Language Processing (NLP), topic modeling, and I also link to the code for a recommender that lets you enter key words from the title of a talk and finds 5 talks that are similar.
-    The data consists of transcripts from Ted and TedX talks. Thanks to the lovely Rounak Banik and his web scraping I was able to dowload transcripts from 2467 Ted and TedX talks from 355 different Ted events. I downloaded this corpus from Kaggle, along with metadata about every talk. I encourage you to go to kaggle and download it so that he can get credit for his scraping rather than put it in this repo.
-    https://www.kaggle.com/rounakbanik/ted-talks
+This repo contains Ipython/Jupyter notebooks for basic exploration of transcripts of Ted Talks using Natural Language Processing (NLP), topic modeling, and I also link to the code for a recommender that lets you enter key words from the title of a talk and finds 5 talks that are similar.  
+    The data consists of transcripts from Ted and TedX talks. Thanks to the lovely Rounak Banik and his web scraping I was able to dowload transcripts from 2467 Ted and TedX talks from 355 different Ted events. I downloaded this corpus from Kaggle, along with metadata about every talk. I encourage you to go to [kaggle][kaggle_link] and download it so that he can get credit for his scraping rather than put it in this repo.  
+    
+[kaggle_link]: https://www.kaggle.com/rounakbanik/ted-talks
     
 
 The initial cleaning and exploration are done in 
