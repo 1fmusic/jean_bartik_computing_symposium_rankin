@@ -17,7 +17,7 @@ United States Naval Academy
         a)	If you have a github account, fork & clone the repo
         b)	If you don’t have a github account, download as zip:
         
-        [![example of how to clone or download a repository][image]][hyperlink]
+        [![example of how to clone or download a repository][12]][https://github.com/1fmusic/jean_bartik_computing_symposium_rankin/blob/master/Picture1.png]
         [image]:https://github.com/1fmusic/jean_bartik_computing_symposium_rankin/blob/master/Picture1.png
         [hyperlink]:https://github.com/1fmusic/jean_bartik_computing_symposium_rankin/blob/master/Picture1.png
 
