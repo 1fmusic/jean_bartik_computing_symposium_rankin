@@ -17,9 +17,9 @@ United States Naval Academy
         a)	If you have a github account, fork & clone the repo
         b)	If you don’t have a github account, download as zip:
         
-        ![example of how to clone or download a repository][image]
+![example of how to clone or download a repository][image]
         
-        [image]:https://github.com/1fmusic/jean_bartik_computing_symposium_rankin/blob/master/Picture1.png
+[image]:https://github.com/1fmusic/jean_bartik_computing_symposium_rankin/blob/master/Picture1.png
        
 3.	Start Anaconda Prompt (miniconda3) 
         On Windows: Search for ‘anaconda’ in the ‘Search Windows’ bar  
