@@ -9,26 +9,27 @@ United States Naval Academy
 
 
 1.	Install mini-conda.  Link:  https://docs.conda.io/en/latest/miniconda.html#linux-installers
-•	Should be Python 3.6 or higher
+        
+        Should be Python 3.6 or higher
 
 2.	Pull Github repo. Link: https://github.com/1fmusic/jean_bartik_computing_symposium_rankin
 
-a)	If you have a github account, fork & clone the repo
-b)	If you don’t have a github account, download as zip:
+        a)	If you have a github account, fork & clone the repo
+        b)	If you don’t have a github account, download as zip:
 
 3.	Start Anaconda Prompt (miniconda3) 
-•	On Windows: Search for ‘anaconda’ in the ‘Search Windows’ bar
-•	On Mac: Open Terminal
+        On Windows: Search for ‘anaconda’ in the ‘Search Windows’ bar
+        On Mac/Linux: Open Terminal
+        
 4.	Create an environment with .yml file
-•	Navigate inside the repo folder
-•	Execute conda env create -f environment.yml
-•	Execute conda activate jbcs2020
-•	At end of session, conda deactivate
+        Navigate inside the repo folder
+        `$ conda env create -f environment.yml`
+        `$ conda activate jbcs2020`
+        `$ jupyter notebook`
+        A browser will open showing the directory tree. Click on the notebook you want to open. 
+        At end of session, `$ conda deactivate`
 
-
-# Ted Talk Topic Modeling
-
-Order of the files: (keep reading for descriptions) 
+# Order of the files: (keep reading for descriptions) 
 
 1. [environment.yml][3]
 2. [ted_clean_jbcs.ipynb][1] 
