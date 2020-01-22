@@ -1,5 +1,31 @@
 # jean_bartik_computing_symposium_rankin
-Natural Language Processing workshop at the Jean Bartik Computing Symposium 2020. 
+Introduction to Natural Language Processing 
+A workshop at the Jean Bartik Computing Symposium 2020. 
+February 27-28, 2020
+United States Naval Academy
+
+# Installation Requirements / Setup Instructions
+
+
+
+1.	Install mini-conda.  Link:  https://docs.conda.io/en/latest/miniconda.html#linux-installers
+•	Should be Python 3.6 or higher
+
+2.	Pull Github repo. Link: https://github.com/1fmusic/jean_bartik_computing_symposium_rankin
+
+a)	If you have a github account, fork & clone the repo
+b)	If you don’t have a github account, download as zip:
+
+3.	Start Anaconda Prompt (miniconda3) 
+•	On Windows: Search for ‘anaconda’ in the ‘Search Windows’ bar
+•	On Mac: Open Terminal
+4.	Create an environment with .yml file
+•	Navigate inside the repo folder
+•	Execute conda env create -f environment.yml
+•	Execute conda activate jbcs2020
+•	At end of session, conda deactivate
+
+
 # Ted Talk Topic Modeling
 
 Order of the files: (keep reading for descriptions) 
