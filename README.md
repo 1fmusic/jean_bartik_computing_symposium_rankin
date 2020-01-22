@@ -18,6 +18,7 @@ United States Naval Academy
         b)	If you don’t have a github account, download as zip:
         
         ![example of how to clone or download a repository][image]
+        
         [image]:https://github.com/1fmusic/jean_bartik_computing_symposium_rankin/blob/master/Picture1.png
        
 3.	Start Anaconda Prompt (miniconda3) 
