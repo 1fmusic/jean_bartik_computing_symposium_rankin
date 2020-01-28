@@ -39,9 +39,7 @@ United States Naval Academy
 2. [ted_clean_jbcs.ipynb][1] 
 3. [topic_modeling_ted_jbcs.nb][10] 
 4. [topic_modeling_tSNE_tutorial3.ipynb][9]
-5. [Recommender_ted.nb][6] 
-6. [ted_rec.html][4] 
-7. [ted_app.py][5] 
+
 
 
 [1]: https://github.com/1fmusic/jean_bartik_computing_symposium_rankin/blob/master/ted_clean_jbcs.ipynb
@@ -49,10 +47,6 @@ United States Naval Academy
 
 [3]: https://github.com/1fmusic/jean_bartik_computing_symposium_rankin/blob/master/environment.yml
 [9]: https://github.com/1fmusic/jean_bartik_computing_symposium_rankin/blob/master/topic_modeling_tSNE_tutorial3.ipynb
-[4]: https://github.com/1fmusic/tedTalkRecommender/blob/master/ted_rec.html
-[5]: https://github.com/1fmusic/tedTalkRecommender/blob/master/ted_app.py
-[6]: https://github.com/1fmusic/tedTalkRecommender/blob/master/Recommender_ted.nb
-
 
 
 
@@ -148,7 +142,7 @@ As you can see it no longer makes a ton of sense, but it will still be very info
     c_vectorizer = CountVectorizer(ngram_range=(1,3), 
                                  stop_words='english',
                                  max_df = 0.6, 
-                                 max_features=10000)
+                                 max_features=2000)
     
     # call `fit` to build the vocabulary
     c_vectorizer.fit(cleaned_talks)
@@ -166,7 +160,7 @@ Open:
 First get the cleaned_talks from the previous step. Then import the models
 
 ```
-    from sklearn.decomposition import LatentDirichletAllocation,  TruncatedSVD, NMF
+    from sklearn.decomposition import LatentDirichletAllocation
 ```
     
 We will try each of these models and tune the hyperparameters to see which one gives us the best topics (ones that make sense to you). It's an art.
@@ -189,19 +183,6 @@ The best parameter to tweak is the number of topics, higher is more narrow, but 
 Once we get the topics that look good, we can do some clustering to improve it further. However, as you can see, these topics are already pretty good, so we will just assign the topic with the highest score to each document. 
 ```
     topic_ind = np.argmax(lda_data, axis=1)
-    topic_ind.shape
-    y=topic_ind
 ```
-    
-Then, you have to decide what to name each topic. Do this and save it for plotting purposes in topic_names. Remember that LDA works by putting all the noise into one topic, so there should be a 'junk' topic that makes no sense. I realize that as you look at my code, you will see that I have not named a 'junk' topic here.  The closest was the 'family' topic but  I still felt like it could be named.  Usually, when running the models with a higher number of topics (25 or more) you would see one that was clearly junk.   
-``` 
-        topic_names = tsne_labels
-        topic_names[topic_names==0] = \"family\" 
-        . . .
-```
-    
-Then we can use some visualization tools to 'see' what our clusters look like. The pyLDAviz is really fun, but only plots the first 2 components, so it isn't exactly that informative. I like looking at the topics using this tool, though. Note: you can only use it on LDA models.
-    
-The best way to 'see' the clusters, is to do another dimensionality reduction and plot them in a new (3D) space. This is called tSNE (t-Distributed Stochastic Neighbor Embedding. When you view the tSNE ,it is important to remember that the distance between clusters isn't relevant, just the clumpiness of the clusters. For example, do the points that are red clump together or are they really spread out? If they are all spread out, then that topic is probably not very cohesive (the documents in there may not be very similar).  
-    
-After the tSNE plot, you will find the functions to run the other models (NMF, Truncated SVD). 
+
+Then we can use some visualization tools to 'see' what our clusters look like. The pyLDAviz is really fun and easy to export or use interactively outside of the notebook. 
